@@ -11,6 +11,7 @@ function shuffleEmojis(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements
   }
+  bgSounds();
 }
 
 shuffleEmojis(emojis); // Shuffle the emojis
@@ -34,6 +35,7 @@ for (let i = 0; i < emojis.length; i++) {
       !boxEmoji.classList.contains("openBox") &&
       !boxEmoji.classList.contains("matchBoxes")
     ) {
+      MouseSound();
       boxEmoji.classList.add("openBox");
       openBoxes.push(boxEmoji);
 
@@ -43,6 +45,7 @@ for (let i = 0; i < emojis.length; i++) {
           if (openBoxes[0].innerHTML === openBoxes[1].innerHTML) {
             openBoxes[0].classList.add("matchBoxes");
             openBoxes[1].classList.add("matchBoxes");
+            MouseSound();
           } else {
             openBoxes[0].classList.remove("openBox");
             openBoxes[1].classList.remove("openBox");
@@ -118,3 +121,20 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
+
+// sound clip add for mouse click
+
+function MouseSound() {
+  var fileUrl = "/media/click-47609.mp3";
+  var audio = new Audio(fileUrl);
+  audio.play();
+}
+
+function bgSounds() {
+  var fileUrl =
+    "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
+  var audio = new Audio(fileUrl);
+  audio.play();
+}
+
+//window.addEventListener("click", MouseSound, false);
