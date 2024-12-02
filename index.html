@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/game.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Smiley Shuffle</h2>
+      <div class="game"></div>
+      <button class="reset">Reset game</button>
+      <div class="stats">
+        <div>Clicks:<span class="counter">0</span></div>
+
+        <div>Open boxes:<span class="number-openBoxes">0</span></div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal" id="popbox">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Popbox Title</h2>
+        <p>Congratulations!. you win</p>
+        <button class="playAgain">Play Again</button>
+      </div>
+    </div>
+    <!-- <div class="message">
+      <p>you win play again</p>
+    </div> -->
+  </body>
+</html>
