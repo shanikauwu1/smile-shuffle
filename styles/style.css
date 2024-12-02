@@ -12,8 +12,8 @@ body{
     min-height: 100vh;
     background-color: rgb(216, 245, 229);
     color: #f6f3f3;
-
-    background-image: url("../images/smile-bg.png");
+/* 
+    background-image: url("../images/smile-bg.png"); */
 
     padding: 1rem;
 }
@@ -239,9 +239,9 @@ box-shadow: inset -1px 3px 8px 5px #0b0b0c, 2px 5px 16px 0px #0B325E,
 /* Styles for each smiley face */
 .smiley {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  opacity: 0.9;
+  width: 128px;
+  height: 128px;
+  opacity: 0.8;
   animation: move 5s ease-in-out infinite, rotate 4s linear infinite;
 }
 
