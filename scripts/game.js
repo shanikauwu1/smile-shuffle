@@ -136,5 +136,3 @@ function bgSounds() {
   var audio = new Audio(fileUrl);
   audio.play();
 }
-
-//window.addEventListener("click", MouseSound, false);
