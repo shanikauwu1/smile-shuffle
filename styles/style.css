@@ -10,9 +10,11 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgb(7, 49, 17);
+    background-color: rgb(216, 245, 229);
     color: #f6f3f3;
+
     background-image: url("../images/smile-bg.png");
+
     padding: 1rem;
 }
 h2{
@@ -223,3 +225,81 @@ box-shadow: inset -1px 3px 8px 5px #0b0b0c, 2px 5px 16px 0px #0B325E,
     margin: 0 0 1rem 0;
   }
 
+
+
+/* smile faces animation */
+
+/* Container to hold all the smiley faces */
+/* .smiley-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+
+/* Styles for each smiley face */
+.smiley {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0.9;
+  animation: move 5s ease-in-out infinite, rotate 4s linear infinite;
+}
+
+/* Animation to move the smiley faces */
+@keyframes move {
+  0% {
+    top: 0%;
+    left: 0%;
+  }
+  25% {
+    top: 10%;
+    left: 50%;
+  }
+  50% {
+    top: 50%;
+    left: 75%;
+  }
+  75% {
+    top: 80%;
+    left: 20%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+
+/* Animation to rotate the smiley faces */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Specific positions for each smiley (optional) */
+.face1 {
+  animation-delay: 0s;
+}
+
+.face2 {
+  animation-delay: 1s;
+}
+
+.face3 {
+  animation-delay: 2s;
+}
+
+.face4 {
+  animation-delay: 3s;
+}
+
+.face5 {
+  animation-delay: 4s;
+}
+
+.face6 {
+  animation-delay: 5s;
+}
