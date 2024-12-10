@@ -12,7 +12,9 @@ body{
     min-height: 100vh;
     background-color: rgb(216, 245, 229);
     color: #f6f3f3;
-    /* background-image: url("../images/smile-bg.png"); */
+
+    background-image: url("../images/smile-bg.png");
+
     padding: 1rem;
 }
 h2{
