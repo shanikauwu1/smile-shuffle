@@ -2,9 +2,27 @@ const gameBoard = document.querySelector(".game");
 const resetBtn = document.querySelector(".reset");
 const counterDiv = document.querySelector(".counter");
 const NumberOfOpenBoxDiv = document.querySelector(".number-openBoxes");
+
+// Get the modal and buttons
+const modal = document.getElementById("popbox");
+//const closeModalBtn = document.getElementById("closeModalBtn");
+const playAgainBtn = document.querySelector(".playAgain");
+const startBtn = document.querySelector(".Start");
+
+// variables declare
 let counter = 0;
 const emoji1 = ["😧", "😴", "😗", "😍", "😮", "😵", "😩", "☹️"];
 const emojis = [...emoji1, ...emoji1];
+
+// start the game with butoon
+modal.style.display = "block";
+playAgainBtn.style.display = "none";
+
+startBtn.addEventListener("click", () => {
+  gameLoad();
+  modal.style.display = "none";
+});
+
 // Fisher-Yates shuffle to randomize the emojis array
 function shuffleEmojis(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -13,8 +31,6 @@ function shuffleEmojis(array) {
   }
   bgSounds();
 }
-
-shuffleEmojis(emojis); // Shuffle the emojis
 
 let openBoxes = []; // Array to track currently opened boxes
 
@@ -29,7 +45,7 @@ for (let i = 0; i < emojis.length; i++) {
   boxEmoji.onclick = function () {
     counter += 1;
     counterDiv.innerHTML = counter;
-    console.log(counter);
+    //console.log(counter);
     if (
       openBoxes.length < 2 &&
       !boxEmoji.classList.contains("openBox") &&
@@ -45,7 +61,6 @@ for (let i = 0; i < emojis.length; i++) {
           if (openBoxes[0].innerHTML === openBoxes[1].innerHTML) {
             openBoxes[0].classList.add("matchBoxes");
             openBoxes[1].classList.add("matchBoxes");
-            MouseSound();
           } else {
             openBoxes[0].classList.remove("openBox");
             openBoxes[1].classList.remove("openBox");
@@ -59,6 +74,9 @@ for (let i = 0; i < emojis.length; i++) {
             document.querySelectorAll(".matchBoxes").length === emojis.length
           ) {
             loadFinalMessage();
+            startBtn.style.display = "none";
+            playAgainBtn.style.display = "block";
+            bgSoundsPause();
           }
 
           NumberOfOpenBoxDiv.innerHTML =
@@ -99,11 +117,6 @@ function loadFinalMessage() {
 
 // popup box
 
-// Get the modal and buttons
-const modal = document.getElementById("popbox");
-const closeModalBtn = document.getElementById("closeModalBtn");
-const playAgainBtn = document.querySelector(".playAgain");
-
 // play again button
 playAgainBtn.addEventListener("click", function () {
   gameLoad();
@@ -111,16 +124,16 @@ playAgainBtn.addEventListener("click", function () {
 });
 
 // Close the modal
-closeModalBtn.addEventListener("click", function () {
-  modal.style.display = "none";
-});
+// closeModalBtn.addEventListener("click", function () {
+//   modal.style.display = "none";
+// });
 
 // Close the modal if the user clicks outside of the modal content
-window.addEventListener("click", function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
+// window.addEventListener("click", function (event) {
+//   if (event.target === modal) {
+//     modal.style.display = "none";
+//   }
+// });
 
 // sound clip add for mouse click
 
@@ -135,6 +148,13 @@ function bgSounds() {
     "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
   var audio = new Audio(fileUrl);
   audio.play();
+}
+
+function bgSoundsPause() {
+  var fileUrl =
+    "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
+  var audio = new Audio(fileUrl);
+  audio.pause();
 }
 
 //window.addEventListener("click", MouseSound, false);
