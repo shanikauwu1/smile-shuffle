@@ -150,6 +150,7 @@ function bgSounds() {
   audio.play();
 }
 
+
 function bgSoundsPause() {
   var fileUrl =
     "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
@@ -157,4 +158,4 @@ function bgSoundsPause() {
   audio.pause();
 }
 
-//window.addEventListener("click", MouseSound, false);
+
