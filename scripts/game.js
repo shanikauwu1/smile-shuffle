@@ -64,7 +64,6 @@ for (let i = 0; i < emojis.length; i++) {
             document.querySelectorAll(".matchBoxes").length === emojis.length
           ) {
             loadFinalMessage();
-            bgSoundsPause();
           }
 
           NumberOfOpenBoxDiv.innerHTML =
