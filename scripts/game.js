@@ -20,17 +20,7 @@ playAgainBtn.style.display = "none";
 
 startBtn.addEventListener("click", () => {
   gameLoad();
-  modal.style.display = "none";
 });
-
-// Fisher-Yates shuffle to randomize the emojis array
-function shuffleEmojis(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-  }
-  bgSounds();
-}
 
 let openBoxes = []; // Array to track currently opened boxes
 
@@ -74,8 +64,6 @@ for (let i = 0; i < emojis.length; i++) {
             document.querySelectorAll(".matchBoxes").length === emojis.length
           ) {
             loadFinalMessage();
-            startBtn.style.display = "none";
-            playAgainBtn.style.display = "block";
             bgSoundsPause();
           }
 
@@ -93,7 +81,7 @@ resetBtn.addEventListener("click", () => {
 });
 
 function gameLoad() {
-  // Reset the game state
+  modal.style.display = "none";
   counter = 0;
   counterDiv.innerHTML = 0;
   NumberOfOpenBoxDiv.innerHTML = 0;
@@ -105,7 +93,7 @@ function gameLoad() {
   });
 
   shuffleEmojis(emojis); // Re-shuffle the emojis
-  // Re-populate the game board with shuffled emojis
+  bgSounds();
   items.forEach((item, index) => {
     item.innerHTML = emojis[index];
   });
@@ -113,27 +101,25 @@ function gameLoad() {
 
 function loadFinalMessage() {
   modal.style.display = "block";
+  startBtn.style.display = "none";
+  playAgainBtn.style.display = "block";
+  document.querySelector(".modal-content h2").innerHTML =
+    "Congratulations! you win";
 }
 
+// Fisher-Yates shuffle to randomize the emojis array   from stack overflow
+function shuffleEmojis(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+}
 // popup box
 
 // play again button
 playAgainBtn.addEventListener("click", function () {
   gameLoad();
-  modal.style.display = "none";
 });
-
-// Close the modal
-// closeModalBtn.addEventListener("click", function () {
-//   modal.style.display = "none";
-// });
-
-// Close the modal if the user clicks outside of the modal content
-// window.addEventListener("click", function (event) {
-//   if (event.target === modal) {
-//     modal.style.display = "none";
-//   }
-// });
 
 // sound clip add for mouse click
 
@@ -149,13 +135,3 @@ function bgSounds() {
   var audio = new Audio(fileUrl);
   audio.play();
 }
-
-
-function bgSoundsPause() {
-  var fileUrl =
-    "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
-  var audio = new Audio(fileUrl);
-  audio.pause();
-}
-
-
