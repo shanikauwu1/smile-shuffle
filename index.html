@@ -10,7 +10,16 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css file -->
     <link rel="stylesheet" href="styles/style.css" />
+    <!-- js file -->
     <script src="scripts/game.js" defer></script>
   </head>
   <body>
@@ -18,20 +27,20 @@
       <h2>Smiley Shuffle</h2>
       <!-- game div -->
       <div class="game"></div>
-      <button class="reset">Reset game</button>
+      <button class="reset">Reset</button>
       <div class="stats">
         <div>Clicks:<span class="counter">0</span></div>
 
-        <div>Open boxes:<span class="number-openBoxes">0</span></div>
+        <div>Open tiles:<span class="number-openBoxes">0</span></div>
       </div>
     </div>
 
     <!-- The Modal -->
     <div class="modal" id="popbox">
       <div class="modal-content">
-        <h2>You wanna Play?</h2>
+        <h2>Match smilies and win</h2>
         <button class="playAgain model-btn">Play Again</button>
-        <button class="Start model-btn">Start</button>
+        <button class="Start model-btn">Let's Go</button>
       </div>
     </div>
   </body>

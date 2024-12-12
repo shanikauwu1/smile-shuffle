@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;
+   
 }
 
 body{
@@ -10,26 +13,18 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background-color: #d9f5e6; */
-    background-color: #040b08;
+    background-color: #f0bb1f;
     color: #f6f3f3;
     padding: 1rem;
     position: relative;
+    background-image: url("../images/emoji-bg.jpeg");
+    background-size: cover;
+    background-position: center; 
+    letter-spacing: 2px;
+  
 }
 
-body::before {
-  content: ""; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../images/smile-bg.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.2; 
-  z-index: -1; 
-}
+
 .container h2{
     font-size: 3rem;
     color: #fff;
@@ -48,7 +43,7 @@ button {
   }
 
   button:hover {
-    background-color: #040b08;
+    background-color: rgb(7, 56, 40);
     color: #f6f3f3;
   }
 .container{
@@ -56,8 +51,8 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
-    background-color: rgb(8, 58, 30);
+    gap: 1rem;
+    background-color: rgb(5, 5, 5);
     padding: 2rem 4rem;
 }
 .game{
@@ -72,22 +67,22 @@ button {
 
 .reset{
     padding: 1rem 1.2rem;
-    color: rgb(8, 82, 57);
+    color: rgb(7, 56, 40);
     border: none;
-    font-size: 1.5rem;
-    background-color: #fff;
+    font-size: 1.8rem;
+    background-color:#f0bb1f;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
     align-self: center;
-    width: auto;  /* Ensure the width is based on the content */
+    width: auto;  
     
     
 }
 .counter{  
     margin-left: .5rem;
     background-color: #f6f3f3;
-    color: rgb(8, 82, 57);
+    color: rgb(7, 56, 40);
     padding: .5rem 1rem;
     border-radius: 3px;
    
@@ -95,13 +90,13 @@ button {
 .number-openBoxes{
     margin-left: .5rem;
     background-color: #f6f3f3;
-    color: rgb(8, 82, 57);
+    color: rgb(7, 56, 40);
     padding: .5rem 1rem;
     border-radius: 3px;
 }
 
 .stats div{
-    font-size: 2rem;
+    font-size: 1.5rem;
      color: #fff;
 }
 
@@ -113,7 +108,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 6rem;
+    font-size: 5rem;
     background-color: #fff;
     transform: rotateY(180deg);
     transition: 0.25s;
@@ -194,19 +189,19 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
     overflow: auto;
     justify-content: center; /* Vertically and horizontally center modal */
-  align-items: center;
-  display: flex; /* Enable flexbox on the modal */
+    align-items: center;
+    display: flex; /* Enable flexbox on the modal */
   }
 
   /* Modal content */
   .modal-content {
-    background-color: white;
+    background-color: #f0bb1f;;
     color: #0b0b0c;
     margin: 15% auto;
-    padding: 20px;
+    padding: 3rem 1rem;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
@@ -218,6 +213,7 @@ button {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
+    border: #f3f4f6 3px solid;
 
   }
   
@@ -230,17 +226,9 @@ button {
   /* Modal Content Styles */
   .modal-content h2 {
     margin: 0 0 1rem 0;
-     color:#0c360e;
+    color:#0c360e;
+    font-size: 2rem;
   }
 
 
-/* smile faces animation */
-
-.smiley {
-  position: absolute;
-  width: 128px;
-  height: 128px;
-  opacity: 0.8;
-  animation: move 5s ease-in-out infinite, rotate 4s linear infinite;
-}
 

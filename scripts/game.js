@@ -92,7 +92,7 @@ function gameLoad() {
   });
 
   shuffleEmojis(emojis); // Re-shuffle the emojis
-  bgSounds();
+  //bgSounds();
   items.forEach((item, index) => {
     item.innerHTML = emojis[index];
   });
@@ -103,7 +103,7 @@ function loadFinalMessage() {
   startBtn.style.display = "none";
   playAgainBtn.style.display = "block";
   document.querySelector(".modal-content h2").innerHTML =
-    "Congratulations! you win";
+    "Congratulations!<br /> you win";
 }
 
 // Fisher-Yates shuffle to randomize the emojis array   from stack overflow
