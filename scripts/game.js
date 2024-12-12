@@ -1,3 +1,6 @@
+// Shanika Ekanayake
+// Final project -Basic
+
 const gameBoard = document.querySelector(".game");
 const resetBtn = document.querySelector(".reset");
 const counterDiv = document.querySelector(".counter");
@@ -7,6 +10,7 @@ const NumberOfOpenBoxDiv = document.querySelector(".number-openBoxes");
 const modal = document.getElementById("popbox");
 const playAgainBtn = document.querySelector(".playAgain");
 const startBtn = document.querySelector(".Start");
+const quitBtn = document.querySelector(".quit");
 
 // variables declare
 let counter = 0;
@@ -78,6 +82,12 @@ resetBtn.addEventListener("click", () => {
   gameLoad();
 });
 
+// quit buttion event handler for  quit the game
+
+quitBtn.addEventListener("click", () => {
+  location.reload();
+});
+
 function gameLoad() {
   modal.style.display = "none";
   counter = 0;
@@ -111,25 +121,25 @@ function shuffleEmojis(array) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements
   }
+
+  //console.log(array);
 }
-// popup box
 
 // play again button
 playAgainBtn.addEventListener("click", function () {
   gameLoad();
 });
 
-// sound clip add for mouse click
-
+// sound clip  for mouse click
 function MouseSound() {
-  var fileUrl = "media/click-47609.mp3";
+  var fileUrl = "/media/click-47609.mp3";
   var audio = new Audio(fileUrl);
   audio.play();
 }
-
+// add the bg sound
 function bgSounds() {
   var fileUrl =
-    "media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
+    "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
   var audio = new Audio(fileUrl);
   audio.play();
 }

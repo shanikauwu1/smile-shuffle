@@ -65,19 +65,26 @@ button {
     perspective: 500px;
 }
 
-.reset{
-    padding: 1rem 1.2rem;
+.Controls{
+  display: flex;
+  justify-content: space-around;
+}
+.btnConrols{
+    padding: 0.6rem 1rem;
     color: rgb(7, 56, 40);
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background-color:#f0bb1f;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
     align-self: center;
-    width: auto;  
+    width: auto;   
     
-    
+}
+.btnConrols:hover{
+ background-color: #f6f3f3;
+ color: #f0bb1f;
 }
 .counter{  
     margin-left: .5rem;
