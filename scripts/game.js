@@ -5,7 +5,6 @@ const NumberOfOpenBoxDiv = document.querySelector(".number-openBoxes");
 
 // Get the modal and buttons
 const modal = document.getElementById("popbox");
-//const closeModalBtn = document.getElementById("closeModalBtn");
 const playAgainBtn = document.querySelector(".playAgain");
 const startBtn = document.querySelector(".Start");
 
@@ -92,7 +91,7 @@ function gameLoad() {
   });
 
   shuffleEmojis(emojis); // Re-shuffle the emojis
-  //bgSounds();
+  bgSounds();
   items.forEach((item, index) => {
     item.innerHTML = emojis[index];
   });
@@ -123,14 +122,14 @@ playAgainBtn.addEventListener("click", function () {
 // sound clip add for mouse click
 
 function MouseSound() {
-  var fileUrl = "/media/click-47609.mp3";
+  var fileUrl = "media/click-47609.mp3";
   var audio = new Audio(fileUrl);
   audio.play();
 }
 
 function bgSounds() {
   var fileUrl =
-    "/media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
+    "media/the-funny-bunch-giulio-fazio-main-version-02-28-16840.mp3";
   var audio = new Audio(fileUrl);
   audio.play();
 }
