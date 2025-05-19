@@ -33,7 +33,7 @@ cd smile-shuffle
 
 ## 📸 Screenshots
 
-![Smile Shuffle Gameplay](./assets/screenshots/screenshot.png)
+![Smile Shuffle Gameplay](./images/sreenshot.png)
 
 
 ## 🔗 Live Demo
