@@ -20,7 +20,7 @@ body{
     background-image: url("../images/emoji-bg.jpeg");
     background-size: cover;
     background-position: center; 
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   
 }
 
@@ -28,7 +28,6 @@ body{
 .container h2{
     font-size: 3rem;
     color: #fff;
-    text-transform: uppercase;
     letter-spacing: 0.1rem;
     text-align: center;
 }
@@ -56,13 +55,21 @@ button {
     padding: 2rem 4rem;
 }
 .game{
-    width: 440px;
-    height: 440px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
     perspective: 500px;
+}
+
+.game-easy{
+  width: 440px;
+  height: 440px;
+}
+
+.game-hard{
+  width: 550px;
+  height: 440px;
 }
 
 .Controls{
@@ -187,6 +194,12 @@ button {
     background-color: #123213;
   }
 
+  .levelBtn {
+   display: flex;
+   gap: 4rem;
+  }
+
+
   /* The Modal - hidden by default */
   .modal {
     display: none;
@@ -198,9 +211,9 @@ button {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Dark background */
     overflow: auto;
-    justify-content: center; /* Vertically and horizontally center modal */
+    justify-content: center; 
     align-items: center;
-    display: flex; /* Enable flexbox on the modal */
+    display: flex; 
   }
 
   /* Modal content */
@@ -208,12 +221,12 @@ button {
     background-color: #f0bb1f;;
     color: #0b0b0c;
     margin: 15% auto;
-    padding: 3rem 1rem;
+    padding: 5rem 2.5rem;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Matching border shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
     transition: box-shadow 0.3s ease;
     font-size: 2rem;
     display: flex;
@@ -235,6 +248,7 @@ button {
     margin: 0 0 1rem 0;
     color:#0c360e;
     font-size: 2rem;
+    text-transform: capitalize;
   }
 
 
