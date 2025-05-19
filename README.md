@@ -37,7 +37,7 @@ cd smile-shuffle
 
 
 ## 🔗 Live Demo
-👉 [View Live Project <](https://shanikacode.in/smily-shuffle/)
+ [View Live Project](https://shanikacode.in/smily-shuffle/)
 
 ## 📬 Contact
 Created by [Shanika Ekanayake](https://shanikacode.in/)
